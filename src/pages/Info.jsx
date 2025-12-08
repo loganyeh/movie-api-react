@@ -1,20 +1,5 @@
-import { getMovieAPIData } from "../services/api";
-import { useEffect } from "react";
 
 function Info() {
-
-    useEffect(() => {
-        
-        const fetchData = async () => {
-            const data = await getMovieAPIData();
-            console.log(data[0]);
-            console.log(data[0].original_title);
-            console.log(data[0].original_title);
-            console.log(data[0].original_title);
-        }
-
-        fetchData();
-    }, [])
 
     return(
         <>
