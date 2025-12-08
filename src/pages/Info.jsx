@@ -9,8 +9,8 @@ function Info() {
             const data = await getMovieAPIData();
             console.log(data[0]);
             console.log(data[0].original_title);
-            console.log(data[0].original_title);
-            console.log(data[0].original_title);
+            console.log(data[0].vote_average);
+            console.log(data[0].poster_path);
         }
 
         fetchData();
