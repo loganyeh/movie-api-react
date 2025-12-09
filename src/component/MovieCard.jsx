@@ -7,8 +7,8 @@ function MovieCard({ movie }) {
 
   function handleFavoriteClick() {
     setFavArray((prev) => {
-      if (prev.some((p) => p.title === movie.title)) {
-        return prev.filter((p) => p.title !== p.title);
+      if (prev.some((p) => p.id === movie.id)) {
+        return prev.filter((p) => p.id !== movie.id);
       } else {
         return [...prev, movie];
       }
