@@ -3,14 +3,13 @@ import { getMovieAPIData } from "../services/api";
 import { useEffect, useState } from "react";
 
 function Home() {
-  const [movie, setMovie] = useState(null);
+  const [movie, setMovie] = useState([]);
 
   useEffect(() => {
     const movieAPIData = async () => {
       try {
         const movies = await getMovieAPIData();
-        setMovie(movies[0]);
-        console.log(movies[0]);
+        setMovie(movies);
       } catch (error) {
         console.error(error);
       }
@@ -19,13 +18,11 @@ function Home() {
     movieAPIData();
   }, []);
 
-  // console.log(movieArr.original_title);
-
   return (
     <>
       <div className="h-full w-10/12 flex flex-wrap flex-row border-2 border-red-600">
         {/* MOVIE POSTER DESIGN */}
-        <div className="container">{movie && <MovieCard movie={movie} />}</div>
+        {movie.map((movie, index) => {return <MovieCard key={index} movie={movie} />})}
       </div>
     </>
   );
