@@ -11,7 +11,8 @@ function Favorites() {
                 <div id="favorite-movies-container" className="h-full w-full flex flex-wrap border-2 border-purple-600">
 
                     {/* MOVIE POSTER INSIDE FAV MOVIE CONTAINER */}
-                    <MovieCard />
+                    {/* <MovieCard /> */}
+                    {/* the component needs object prop the card above passed none and crashed whole thing */}
 
                 </div>
                 
