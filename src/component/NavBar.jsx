@@ -17,6 +17,13 @@ function NavBar() {
 
   const handleInput = (event) => {
     setInputValue(event.target.value);
+
+    const retrieveSearchMovie = async (inputValue) => {
+      const response = await searchMovie(inputValue);
+      setMovies(response);
+    };
+
+    retrieveSearchMovie(inputValue);
   }
 
   const handleSearch = () => {
