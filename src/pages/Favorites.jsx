@@ -1,12 +1,9 @@
 import MovieCard from "../component/MovieCard";
-import { useState } from "react";
 import { useContext } from "react";
 import { MyContext } from "../context/MyContext";
 
 function Favorites() {
-    
-    const [movies, setMovies] = useState([]);
-    const {favArray, setFavArray} = useContext(MyContext);
+    const { favArray } = useContext(MyContext);
 
     return(
         <>

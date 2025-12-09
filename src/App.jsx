@@ -8,11 +8,13 @@ import { useState } from 'react';
 
 function App() {
   const [favArray, setFavArray] = useState([]);
+  const [resetEffect, setResetEffect] = useState(true);
+  const [movies, setMovies] = useState([]);
 
   return (
     <>
       <div className="h-screen w-screen flex">
-        <MyContext.Provider value={{ favArray, setFavArray }}>
+        <MyContext.Provider value={{ favArray, setFavArray, movies, setMovies, resetEffect, setResetEffect }}>
           <NavBar />
           <Routes>
             <Route path="/" element={<Home />}/>
