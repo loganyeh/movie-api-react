@@ -21,7 +21,7 @@ function MovieCard({ movie }) {
         <img
           className="h-full w-full row-start-1 row-end-11 col-start-1 col-end-13 object-cover rounded-t-2xl"
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-          alt="movie1"
+          alt={`${movie.title}`}
         />
         <div className="flex row-start-11 row-end-13 col-start-1 col-end-13">
           <div className="h-full w-3/6 flex justify-center items-center">
