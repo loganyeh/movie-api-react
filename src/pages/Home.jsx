@@ -28,7 +28,7 @@ function Home() {
 
   return (
     <>
-      <div className="h-full w-10/12 flex flex-wrap flex-row border-2 border-red-600">
+      <div className="h-full w-10/12 flex flex-wrap justify-around border-2 border-red-600">
         {/* MOVIE POSTER DESIGN */}
         {movie.map((movie, index) => (<MovieCard key={index} movie={movie} />))}
       </div>
