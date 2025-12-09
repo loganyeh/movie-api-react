@@ -1,4 +1,5 @@
 import MovieCard from "../component/MovieCard";
+import { useState } from "react";
 
 function Favorites() {
 
@@ -11,8 +12,7 @@ function Favorites() {
                 <div id="favorite-movies-container" className="h-full w-full flex flex-wrap border-2 border-purple-600">
 
                     {/* MOVIE POSTER INSIDE FAV MOVIE CONTAINER */}
-                    {/* <MovieCard /> */}
-                    {/* the component needs object prop the card above passed none and crashed whole thing */}
+                    
 
                 </div>
                 

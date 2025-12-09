@@ -1,6 +1,4 @@
 import { Routes, Route, Router } from 'react-router-dom';
-import { MyContext } from './context/MyContext';
-import { useContext } from 'react';
 import NavBar from "./component/NavBar";
 import Home from './pages/Home';
 import Favorites from "./pages/Favorites";
