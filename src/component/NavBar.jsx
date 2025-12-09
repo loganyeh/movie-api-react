@@ -5,7 +5,7 @@ import { MyContext } from "../context/MyContext";
 import { searchMovie } from "../services/api";
 
 function NavBar() {
-  const { favArray, setFavArray, movies, setMovies, resetEffect, setResetEffect } = useContext(MyContext);
+  const { setMovies, setResetEffect } = useContext(MyContext);
   const [inputValue, setInputValue] = useState('');
 
   function handleReset() {
@@ -17,7 +17,6 @@ function NavBar() {
 
   const handleInput = (event) => {
     setInputValue(event.target.value);
-    // after searching clear the input field
   }
 
   const handleSearch = () => {
@@ -26,12 +25,10 @@ function NavBar() {
     const retrieveSearchMovie = async (inputValue) => {
       const response = await searchMovie(inputValue);
       setMovies(response);
-      // console.log(response);
-      // console.log(typeof response);
     };
 
     setInputValue('');
-    retrieveSearchMovie();
+    retrieveSearchMovie(inputValue);
   }
 
   return (
