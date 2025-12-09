@@ -9,7 +9,6 @@ import { useState } from 'react';
 function App() {
   const [favArray, setFavArray] = useState([]);
 
-
   return (
     <>
       <div className="h-screen w-screen flex">
