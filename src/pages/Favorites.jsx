@@ -1,7 +1,12 @@
 import MovieCard from "../component/MovieCard";
 import { useState } from "react";
+import { useContext } from "react";
+import { MyContext } from "../context/MyContext";
 
 function Favorites() {
+    const [movies, setMovies] = useState([]);
+    const {favArray, setFavArray} = useContext(MyContext);
+
 
     return(
         <>
@@ -12,7 +17,7 @@ function Favorites() {
                 <div id="favorite-movies-container" className="h-full w-full flex flex-wrap border-2 border-purple-600">
 
                     {/* MOVIE POSTER INSIDE FAV MOVIE CONTAINER */}
-                    
+                    {favArray.map((movie, index) => (<MovieCard movie={movie} key={index}/>))}
 
                 </div>
                 
