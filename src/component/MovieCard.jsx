@@ -33,7 +33,11 @@ function MovieCard({ movie }) {
           <div
             onClick={handleFavoriteClick}
             className={`h-full w-1/6 flex justify-center items-center text-4xl hover:bg-red-600 active:bg-red-700 active:text-black rounded-br-2xl
-              ${isFavorite ? 'bg-red-600 hover:bg-red-700 active:bg-red-500 text-white' : ''}
+              ${
+                isFavorite
+                  ? "bg-red-600 hover:bg-red-700 active:bg-red-500 text-white"
+                  : ""
+              }
             `}
           >
             o

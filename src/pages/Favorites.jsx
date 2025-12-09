@@ -4,8 +4,6 @@ import { useContext } from "react";
 import { MyContext } from "../context/MyContext";
 
 function Favorites() {
-    
-    const [movies, setMovies] = useState([]);
     const {favArray, setFavArray} = useContext(MyContext);
 
     return(
