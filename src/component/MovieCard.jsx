@@ -3,7 +3,7 @@ import { MyContext } from "../context/MyContext";
 
 function MovieCard({ movie }) {
   const { favArray, setFavArray } = useContext(MyContext);
-  const favorite = true;
+  const isFavorite = favArray.some((prev) => prev.id === movie.id);
 
   function handleFavoriteClick() {
     setFavArray((prev) => {
@@ -32,7 +32,9 @@ function MovieCard({ movie }) {
           </div>
           <div
             onClick={handleFavoriteClick}
-            className="h-full w-1/6 flex justify-center items-center text-4xl hover:bg-gray-200 active:bg-gray-400 active:text-red-600 rounded-br-2xl"
+            className={`h-full w-1/6 flex justify-center items-center text-4xl hover:bg-red-600 active:bg-red-700 active:text-black rounded-br-2xl
+              ${isFavorite ? 'bg-red-600 hover:bg-red-700 active:bg-red-500 text-white' : ''}
+            `}
           >
             o
           </div>
